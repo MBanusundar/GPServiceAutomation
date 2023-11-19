@@ -6,6 +6,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -20,17 +21,19 @@ import org.assertj.core.api.SoftAssertions;
 
 public class LoginSteps {
 
-    WebDriver driver=null;
+ WebDriver driver = null;
+
     SoftAssertions softAssertions;
    // System.setProperty("webdriver.chrome.driver","C:\Users\Thayaparan\Downloads\chromedriver-win64\chromedriver.exe")
 
     @Given("user is in login page")
     public void user_is_in_login_page() throws InterruptedException {
-        LoginPage login = new LoginPage(driver);
+        LoginPage login = new LoginPage();
 
         // web Driver intialization
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Thayaparan\\Downloads\\chromedriver-win64\\chromedriver.exe");
-        driver = new ChromeDriver();
+        WebDriverManager.chromedriver().setup();
+      //  System.setProperty("webdriver.chrome.driver","\\src\\test\\Resources\\Drivers\\chromedriver.exe");
+       driver = new ChromeDriver();
         //navigate to the web login URL
         driver.get("https://app.alt.thegpservice.com/register/login");
         //maxmizithe the window

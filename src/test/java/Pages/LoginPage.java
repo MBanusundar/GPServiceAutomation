@@ -12,9 +12,7 @@ public class LoginPage {
 
 
 
-    public LoginPage(WebDriver driver){
-        this.driver=driver;
-    }
+
 
     public void acceptCookie(){
         driver.findElement(acceptButton).click();
