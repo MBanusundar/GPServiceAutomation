@@ -17,7 +17,7 @@ Web browser - Latest version recommended.
 Text editor - IntelliJ or Eclipse
 
 **Installation**
-1. Clone the repository to your local machine: https://github.com/MBanusundar/GPServiceAutomation.git
+1. Clone the repository to your local machine: git clone https://github.com/MBanusundar/GPServiceAutomation.git
 Alternatively, you can download the ZIP file and extract its contents.
 
 2.Open the project folder in your preferred text editor
